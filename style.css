@@ -11,13 +11,12 @@ body{
 table{
 	width: 500px;
 	color: white;
-	padding: 10px;
 	font-size: 20px;
-	margin: 0px auto;
+	margin: 20px auto;
 }
 
 td, th{
-	padding: 6px;
+	padding: 5px;
 	text-align: center;
 }
 
