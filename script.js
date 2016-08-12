@@ -175,17 +175,17 @@ var pentek = {
 		],
 		
 		perc: [
-			"", 0, 2, 4, 5
+			"", 35, 41, 47, 53
 		]
 	},
 
 	vege: {
 		ora: [
-			"", 20, 19, 19, 19
+			"", 20, 20, 20, 20
 		],
 
 		perc: [
-			"", 1, 3, 5, 7
+			"", 40, 46, 52, 58
 		]
 	}
 };
@@ -212,11 +212,11 @@ for(var i = 1; i <= 4; i++){
 setInterval(function(){
 now = new Date();
 
-if(now.getDay() == 5){nap = hetfo;}
+if(now.getDay() == 1){nap = hetfo;}
 if(now.getDay() == 2){nap = kedd;}
 if(now.getDay() == 3){nap = szerda;}
 if(now.getDay() == 4){nap = csutortok;}
-if(now.getDay() == 1){nap = pentek;}
+if(now.getDay() == 5){nap = pentek;}
 
 for(var i = 1; i <= 4; i++){
 	// 1 órán belül elkezdődik

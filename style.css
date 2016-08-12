@@ -9,14 +9,21 @@ body{
 }
 
 table{
-	width: 90%;
+	width: 500px;
 	color: white;
 	padding: 10px;
-	font-size: 50px;
+	font-size: 20px;
 	margin: 0px auto;
 }
 
 td, th{
 	padding: 6px;
 	text-align: center;
+}
+
+@media (max-width: 1000px){
+	table{
+		font-size: 50px;
+		width: 90%;
+	}
 }
