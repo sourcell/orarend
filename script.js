@@ -1,4 +1,7 @@
 var now = new Date();
+var kezdesKulonbseg;
+var vegeKulonbseg;
+var nap;
 
 var sor = [
 	"",
@@ -211,11 +214,11 @@ var pentek = {
 };
 
 
-if(now.getDay() == 1){var nap = hetfo;}
-if(now.getDay() == 2){var nap = kedd;}
-if(now.getDay() == 3){var nap = szerda;}
-if(now.getDay() == 4){var nap = csutortok;}
-if(now.getDay() == 5 || now.getDay() == 6 || now.getDay() == 0){var nap = pentek;}
+if(now.getDay() == 1){nap = hetfo;}else
+if(now.getDay() == 2){nap = kedd;}else
+if(now.getDay() == 3){nap = szerda;}else
+if(now.getDay() == 4){nap = csutortok;}else
+if(now.getDay() == 5){nap = pentek;}else{nap = pentek;}
 
 
 for(var i = 0; i <= 8; i++){
@@ -227,7 +230,7 @@ for(var i = 0; i <= 8; i++){
 setInterval(function(){
 now = new Date();
 
-for(var i = 1; i <= 8; i++){
+/*for(var i = 1; i <= 8; i++){
 	// 1 órán belül elkezdődik
 	if(now.getHours() == nap.kezdes.ora[i] - 1 && now.getMinutes() > nap.kezdes.perc[i]){
 		kezdes[i].innerHTML = 60 + nap.kezdes.perc[i] - now.getMinutes() + "'";
@@ -254,7 +257,7 @@ for(var i = 1; i <= 8; i++){
 	}
 	
 	// elkezdődött de még nincs vége - NARANCSSÁRGA
-	if(now.getHours() == nap.kezdes.ora[i] && now.getMinutes() >= nap.kezdes.perc[i] && now.getMinutes() < nap.vege.perc[i]){
+	if(now.getHours() == nap.kezdes.ora[i] && now.getHours() < nap.vege.ora[i] && now.getMinutes() >= nap.kezdes.perc[i] && now.getMinutes() < nap.vege.perc[i]){
 		kezdes[i].innerHTML = "->";
 		sor[i].style.color = "#f39c12";
 
@@ -275,6 +278,66 @@ for(var i = 1; i <= 8; i++){
 		vege[i].innerHTML = nap.vege.ora[i] + ":" + nap.vege.perc[i];
 		sor[i].style.color = "#2ecc71";
 	}
+}*/
+
+
+
+// TEST BELOW HERE
+
+for(var i = 1; i <= 8; i++){
+
+	kezdesKulonbseg = (nap.kezdes.ora[i]*100 + nap.kezdes.perc[i]) - (now.getHours()*100 + now.getMinutes());
+	vegeKulonbseg = (nap.vege.ora[i]*100 + nap.vege.perc[i]) - (now.getHours()*100 + now.getMinutes());
+
+	// több mint 60 perc múlva kezdődik - Fehér
+	if(kezdesKulonbseg > 100){
+		if(nap.kezdes.perc[i] == "0"){
+			kezdes[i].innerHTML = nap.kezdes.ora[i] + ":" + "00";
+		}else if(nap.kezdes.perc[i] == "5"){
+			kezdes[i].innerHTML = nap.kezdes.ora[i] + ":" + "05";
+		}else{
+			kezdes[i].innerHTML = nap.kezdes.ora[i] + ":" + nap.kezdes.perc[i];
+		}
+
+		vege[i].innerHTML = nap.vege.ora[i] + ":" + nap.vege.perc[i];
+	}
+
+	// 60 percen belül kezdődik - Fehér + visszaszámlálás  <--- Fixed?
+	if(kezdesKulonbseg <= 100 && kezdesKulonbseg >= 1){
+		if(now.getMinutes() >= nap.kezdes.perc[i]){
+			kezdes[i].innerHTML = 60 + nap.kezdes.perc[i] - now.getMinutes() + "'";
+		}else{
+			kezdes[i].innerHTML = nap.kezdes.perc[i] - now.getMinutes() + "'";
+		}
+
+		//kezdes[i].innerHTML = kezdesKulonbseg + "'";
+		vege[i].innerHTML = nap.vege.ora[i] + ":" + nap.vege.perc[i];
+	}
+
+	// elkezdődött, de nincs vége - Sárga
+	if(kezdesKulonbseg <= 0 && vegeKulonbseg >= 1){
+		kezdes[i].innerHTML = "...";
+		vege[i].innerHTML = vegeKulonbseg + "'";
+		sor[i].style.color = "#F39C12";
+	}
+
+	// már vége - Zöld
+	if(vegeKulonbseg <= 0){
+		if(nap.kezdes.perc[i] == "0"){
+			kezdes[i].innerHTML = nap.kezdes.ora[i] + ":" + "00";
+		}else if(nap.kezdes.perc[i] == "5"){
+			kezdes[i].innerHTML = nap.kezdes.ora[i] + ":" + "05";
+		}else{
+			kezdes[i].innerHTML = nap.kezdes.ora[i] + ":" + nap.kezdes.perc[i];
+		}
+
+		vege[i].innerHTML = nap.vege.ora[i] + ":" + nap.vege.perc[i];
+		sor[i].style.color = "#2ECC71";
+	}
 }
 
 }, 1000);
+
+
+
+
