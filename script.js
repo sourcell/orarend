@@ -254,7 +254,7 @@ for(var i = 1; i <= 8; i++){
 	}
 	
 	// elkezdődött de még nincs vége - NARANCSSÁRGA
-	if(now.getHours() == nap.kezdes.ora[i] && now.getHours() < nap.vege.ora[i] && now.getMinutes() >= nap.kezdes.perc[i] && now.getMinutes() < nap.vege.perc[i]){
+	if(now.getHours() == nap.kezdes.ora[i] && now.getMinutes() >= nap.kezdes.perc[i] && now.getMinutes() < nap.vege.perc[i]){
 		kezdes[i].innerHTML = "->";
 		sor[i].style.color = "#f39c12";
 
