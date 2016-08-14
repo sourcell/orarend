@@ -65,7 +65,7 @@ var vege = [
 
 var hetfo = {
 	targy: [
-		"", "Hetfo", "Hetfo", "Hetfo", "Hetfo", "Hetfo", "Hetfo", "Hetfo", "Hetfo"
+		"", "H&eacutetfo", "H&eacutetfo", "H&eacutetfo", "H&eacutetfo", "H&eacutetfo", "H&eacutetfo", "H&eacutetfo", "H&eacutetfo"
 	],
 
 	terem: [
@@ -155,7 +155,7 @@ var szerda = {
 
 var csutortok = {
 	targy: [
-		"", "Csutortok", "Csutortok", "Csutortok", "Csutortok", "Csutortok", "Csutortok", "Csutortok", "Csutortok"
+		"", "Cs&uumlt&oumlrt&oumlk", "Cs&uumlt&oumlrt&oumlk", "Cs&uumlt&oumlrt&oumlk", "Cs&uumlt&oumlrt&oumlk", "Cs&uumlt&oumlrt&oumlk", "Cs&uumlt&oumlrt&oumlk", "Cs&uumlt&oumlrt&oumlk", "Csutortok"
 	],
 
 	terem: [
@@ -185,7 +185,7 @@ var csutortok = {
 
 var pentek = {
 	targy: [
-		"", "Pentek", "Pentek", "Pentek", "Pentek", "Pentek", "Pentek", "Pentek", "Pentek"
+		"", "P&eacutentek", "P&eacutentek", "P&eacutentek", "P&eacutentek", "P&eacutentek", "P&eacutentek", "P&eacutentek", "P&eacutentek"
 	],
 
 	terem: [
@@ -229,60 +229,6 @@ for(var i = 0; i <= 8; i++){
 
 setInterval(function(){
 now = new Date();
-
-/*for(var i = 1; i <= 8; i++){
-	// 1 órán belül elkezdődik
-	if(now.getHours() == nap.kezdes.ora[i] - 1 && now.getMinutes() > nap.kezdes.perc[i]){
-		kezdes[i].innerHTML = 60 + nap.kezdes.perc[i] - now.getMinutes() + "'";
-		vege[i].innerHTML = nap.vege.ora[i] + ":" + nap.vege.perc[i];
-	}
-
-	// az óra ugyanaz de a perc még nem - FEHÉR
-	if(now.getHours() == nap.kezdes.ora[i] && now.getMinutes() < nap.kezdes.perc[i]){
-		kezdes[i].innerHTML = nap.kezdes.perc[i] - now.getMinutes() + "'";
-		vege[i].innerHTML = nap.vege.ora[i] + ":" + nap.vege.perc[i];
-
-	}
-	
-	// több mint 1 órán belül kezdődik - FEHÉR
-	if(now.getHours() < nap.kezdes.ora[i] - 1){
-		if(nap.kezdes.perc[i] == 0){
-			kezdes[i].innerHTML = nap.kezdes.ora[i] + ":00";
-		}else if(nap.kezdes.perc[i] == 5){
-			kezdes[i].innerHTML = nap.kezdes.ora[i] + ":05";
-		}else{
-			kezdes[i].innerHTML = nap.kezdes.ora[i] + ":" + nap.kezdes.perc[i];
-		}
-		vege[i].innerHTML = nap.vege.ora[i] + ":" + nap.vege.perc[i];
-	}
-	
-	// elkezdődött de még nincs vége - NARANCSSÁRGA
-	if(now.getHours() == nap.kezdes.ora[i] && now.getHours() < nap.vege.ora[i] && now.getMinutes() >= nap.kezdes.perc[i] && now.getMinutes() < nap.vege.perc[i]){
-		kezdes[i].innerHTML = "->";
-		sor[i].style.color = "#f39c12";
-
-		vege[i].innerHTML = nap.vege.perc[i] - now.getMinutes() + "'";
-
-	}
-
-	// már vége - ZÖLD
-	if(now.getHours() == nap.kezdes.ora[i] && now.getMinutes() >= nap.vege.perc[i] || now.getHours() > nap.vege.ora[i]){
-		if(nap.kezdes.perc[i] == 0){
-			kezdes[i].innerHTML = nap.kezdes.ora[i] + ":00";
-		}else if(nap.kezdes.perc[i] == 5){
-			kezdes[i].innerHTML = nap.kezdes.ora[i] + ":05";
-		}else{
-			kezdes[i].innerHTML = nap.kezdes.ora[i] + ":" + nap.kezdes.perc[i];
-		}
-
-		vege[i].innerHTML = nap.vege.ora[i] + ":" + nap.vege.perc[i];
-		sor[i].style.color = "#2ecc71";
-	}
-}*/
-
-
-
-// TEST BELOW HERE
 
 for(var i = 1; i <= 8; i++){
 
