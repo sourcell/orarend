@@ -3,6 +3,18 @@ var kezdesKulonbseg;
 var vegeKulonbseg;
 var nap;
 
+var sorszam = [
+	"",
+	document.getElementById("sorszam1"),
+	document.getElementById("sorszam2"),
+	document.getElementById("sorszam3"),
+	document.getElementById("sorszam4"),
+	document.getElementById("sorszam5"),
+	document.getElementById("sorszam6"),
+	document.getElementById("sorszam7"),
+	document.getElementById("sorszam8")	
+];
+
 var sor = [
 	"",
 	document.getElementById("sor1"),
@@ -64,6 +76,8 @@ var vege = [
 ];
 
 var hetfo = {
+	orakszama: 9,
+
 	targy: [
 		"", "H&eacutetfo", "H&eacutetfo", "H&eacutetfo", "H&eacutetfo", "H&eacutetfo", "H&eacutetfo", "H&eacutetfo", "H&eacutetfo"
 	],
@@ -94,6 +108,8 @@ var hetfo = {
 };
 
 var kedd = {
+	orakszama: 8,
+
 	targy: [
 		"", "Kedd", "Kedd", "Kedd", "Kedd", "Kedd", "Kedd", "Kedd", "Kedd"
 	],
@@ -124,6 +140,8 @@ var kedd = {
 };
 
 var szerda = {
+	orakszama: 7,
+
 	targy: [
 		"", "Szerda", "Szerda", "Szerda", "Szerda", "Szerda", "Szerda", "Szerda", "Szerda"
 	],
@@ -154,6 +172,8 @@ var szerda = {
 };
 
 var csutortok = {
+	orakszama: 6,
+
 	targy: [
 		"", "Cs&uumlt&oumlrt&oumlk", "Cs&uumlt&oumlrt&oumlk", "Cs&uumlt&oumlrt&oumlk", "Cs&uumlt&oumlrt&oumlk", "Cs&uumlt&oumlrt&oumlk", "Cs&uumlt&oumlrt&oumlk", "Cs&uumlt&oumlrt&oumlk", "Csutortok"
 	],
@@ -184,6 +204,8 @@ var csutortok = {
 };
 
 var pentek = {
+	orakszama: 5,
+
 	targy: [
 		"", "P&eacutentek", "P&eacutentek", "P&eacutentek", "P&eacutentek", "P&eacutentek", "P&eacutentek", "P&eacutentek", "P&eacutentek"
 	],
@@ -221,7 +243,8 @@ if(now.getDay() == 4){nap = csutortok;}else
 if(now.getDay() == 5){nap = pentek;}else{nap = pentek;}
 
 
-for(var i = 0; i <= 8; i++){
+for(var i = 0; i <= nap.orakszama; i++){
+	sorszam[i].innerHTML = i + ".";
 	targy[i].innerHTML = nap.targy[i];
 	terem[i].innerHTML = nap.terem[i];
 }
@@ -230,7 +253,7 @@ for(var i = 0; i <= 8; i++){
 setInterval(function(){
 now = new Date();
 
-for(var i = 1; i <= 8; i++){
+for(var i = 1; i <= nap.orakszama; i++){
 
 	kezdesKulonbseg = (nap.kezdes.ora[i]*100 + nap.kezdes.perc[i]) - (now.getHours()*100 + now.getMinutes());
 	vegeKulonbseg = (nap.vege.ora[i]*100 + nap.vege.perc[i]) - (now.getHours()*100 + now.getMinutes());
