@@ -3,18 +3,6 @@ var kezdesKulonbseg;
 var vegeKulonbseg;
 var nap;
 
-var sorszam = [
-	"",
-	document.getElementById("sorszam1"),
-	document.getElementById("sorszam2"),
-	document.getElementById("sorszam3"),
-	document.getElementById("sorszam4"),
-	document.getElementById("sorszam5"),
-	document.getElementById("sorszam6"),
-	document.getElementById("sorszam7"),
-	document.getElementById("sorszam8")	
-];
-
 var sor = [
 	"",
 	document.getElementById("sor1"),
@@ -25,6 +13,18 @@ var sor = [
 	document.getElementById("sor6"),
 	document.getElementById("sor7"),
 	document.getElementById("sor8")
+];
+
+var sorszam = [
+	"",
+	document.getElementById("sorszam1"),
+	document.getElementById("sorszam2"),
+	document.getElementById("sorszam3"),
+	document.getElementById("sorszam4"),
+	document.getElementById("sorszam5"),
+	document.getElementById("sorszam6"),
+	document.getElementById("sorszam7"),
+	document.getElementById("sorszam8")	
 ];
 
 var targy = [
@@ -76,10 +76,10 @@ var vege = [
 ];
 
 var hetfo = {
-	orakszama: 9,
+	orakszama: 8,
 
 	targy: [
-		"", "H&eacutetfo", "H&eacutetfo", "H&eacutetfo", "H&eacutetfo", "H&eacutetfo", "H&eacutetfo", "H&eacutetfo", "H&eacutetfo"
+		"", "Hétfő", "Hétfő", "Hétfő", "Hétfő", "Hétfő", "Hétfő", "Hétfő", "Hétfő"
 	],
 
 	terem: [
@@ -88,7 +88,7 @@ var hetfo = {
 
 	kezdes: {
 		ora: [
-			"", 8, 9, 10, 11, 12, 13, 14, 15
+			"", 15, 16, 17, 18, 19, 20, 21, 22
 		],
 		
 		perc: [
@@ -98,7 +98,7 @@ var hetfo = {
 
 	vege: {
 		ora: [
-			"", 8, 9, 10, 11, 12, 13, 14, 15
+			"", 15, 16, 17, 18, 19, 20, 21, 22
 		],
 
 		perc: [
@@ -140,7 +140,7 @@ var kedd = {
 };
 
 var szerda = {
-	orakszama: 7,
+	orakszama: 8,
 
 	targy: [
 		"", "Szerda", "Szerda", "Szerda", "Szerda", "Szerda", "Szerda", "Szerda", "Szerda"
@@ -172,10 +172,10 @@ var szerda = {
 };
 
 var csutortok = {
-	orakszama: 6,
+	orakszama: 8,
 
 	targy: [
-		"", "Cs&uumlt&oumlrt&oumlk", "Cs&uumlt&oumlrt&oumlk", "Cs&uumlt&oumlrt&oumlk", "Cs&uumlt&oumlrt&oumlk", "Cs&uumlt&oumlrt&oumlk", "Cs&uumlt&oumlrt&oumlk", "Cs&uumlt&oumlrt&oumlk", "Csutortok"
+		"", "Csütörtök", "Csütörtök", "Csütörtök", "Csütörtök", "Csütörtök", "Csütörtök", "Csütörtök", "Csütörtök"
 	],
 
 	terem: [
@@ -204,10 +204,10 @@ var csutortok = {
 };
 
 var pentek = {
-	orakszama: 5,
+	orakszama: 8,
 
 	targy: [
-		"", "P&eacutentek", "P&eacutentek", "P&eacutentek", "P&eacutentek", "P&eacutentek", "P&eacutentek", "P&eacutentek", "P&eacutentek"
+		"", "Péntek", "Péntek", "Péntek", "Péntek", "Péntek", "Péntek", "Péntek", "Péntek"
 	],
 
 	terem: [
@@ -243,7 +243,7 @@ if(now.getDay() == 4){nap = csutortok;}else
 if(now.getDay() == 5){nap = pentek;}else{nap = pentek;}
 
 
-for(var i = 0; i <= nap.orakszama; i++){
+for(var i = 1; i <= nap.orakszama; i++){
 	sorszam[i].innerHTML = i + ".";
 	targy[i].innerHTML = nap.targy[i];
 	terem[i].innerHTML = nap.terem[i];
@@ -269,6 +269,7 @@ for(var i = 1; i <= nap.orakszama; i++){
 		}
 
 		vege[i].innerHTML = nap.vege.ora[i] + ":" + nap.vege.perc[i];
+		sor[i].style.color = "#ECF0F1";
 	}
 
 	// 60 percen belül kezdődik - Fehér + visszaszámlálás  <--- Fixed?
@@ -281,6 +282,7 @@ for(var i = 1; i <= nap.orakszama; i++){
 
 		//kezdes[i].innerHTML = kezdesKulonbseg + "'";
 		vege[i].innerHTML = nap.vege.ora[i] + ":" + nap.vege.perc[i];
+		sor[i].style.color = "#ECF0F1";
 	}
 
 	// elkezdődött, de nincs vége - Sárga
