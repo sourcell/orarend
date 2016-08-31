@@ -76,14 +76,14 @@ var vege = [
 ];
 
 var hetfo = {
-	orakszama: 8,
+	orakszama: 9,
 
 	targy: [
-		"", "Hétfő", "Hétfő", "Hétfő", "Hétfő", "Hétfő", "Hétfő", "Hétfő", "Hétfő"
+		"", "Fizika", "Német", "Matek", "Magyar", "Kémia", "Angol", "OFŐ", "Tesi", "Tesi"
 	],
 
 	terem: [
-		"", "2", "4", "6", "8", "10", "12", "14", "16"
+		"", "F", "4", "3", "4", "K", "4", "4", "T", "T"
 	],
 
 	kezdes: {
@@ -108,14 +108,14 @@ var hetfo = {
 };
 
 var kedd = {
-	orakszama: 8,
+	orakszama: 7,
 
 	targy: [
-		"", "Kedd", "Kedd", "Kedd", "Kedd", "Kedd", "Kedd", "Kedd", "Kedd"
+		"", "Német", "Német", "Matek", "Tesi", "Biosz", "Föci", "Töri"
 	],
 
 	terem: [
-		"", "2", "4", "6", "8", "10", "12", "14", "16"
+		"", "4", "4", "4", "T", "K", "14", "4"
 	],
 
 	kezdes: {
@@ -140,14 +140,14 @@ var kedd = {
 };
 
 var szerda = {
-	orakszama: 8,
+	orakszama: 7,
 
 	targy: [
-		"", "Szerda", "Szerda", "Szerda", "Szerda", "Szerda", "Szerda", "Szerda", "Szerda"
+		"", "Kémia", "Magyar", "Ének", "Matek", "Német", "Fizika", "Angol"
 	],
 
 	terem: [
-		"", "2", "4", "6", "8", "10", "12", "14", "16"
+		"", "K", "R", "É", "1", "7", "F", "8"
 	],
 
 	kezdes: {
@@ -172,14 +172,14 @@ var szerda = {
 };
 
 var csutortok = {
-	orakszama: 8,
+	orakszama: 7,
 
 	targy: [
-		"", "Csütörtök", "Csütörtök", "Csütörtök", "Csütörtök", "Csütörtök", "Csütörtök", "Csütörtök", "Csütörtök"
+		"", "Töri", "Föci", "Civil", "Német", "Angol", "Angol", "Tesi"
 	],
 
 	terem: [
-		"", "2", "4", "6", "8", "10", "12", "14", "16"
+		"", "4", "14", "R", "F", "11", "10", "T"
 	],
 
 	kezdes: {
@@ -204,14 +204,14 @@ var csutortok = {
 };
 
 var pentek = {
-	orakszama: 8,
+	orakszama: 6,
 
 	targy: [
-		"", "Péntek", "Péntek", "Péntek", "Péntek", "Péntek", "Péntek", "Péntek", "Péntek"
+		"", "Tesi", "Német", "Magyar", "Magyar", "Biosz", "Média"
 	],
 
 	terem: [
-		"", "2", "4", "6", "8", "10", "12", "14", "16"
+		"", "T", "6", "4", "4", "K", "5"
 	],
 
 	kezdes: {
@@ -308,6 +308,7 @@ for(var i = 1; i <= nap.orakszama; i++){
 }
 
 }, 1000);
+
 
 
 
