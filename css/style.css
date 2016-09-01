@@ -1,0 +1,21 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	background-color: #333;
+	font-family: "Trebuchet MS";
+}
+
+table{
+	width: 95%;
+	color: #ECF0F1;
+	font-size: 1.25rem;
+	margin: 20px auto;
+}
+
+td, th{
+	padding: 2px;
+	text-align: center;
+}
