@@ -135,13 +135,13 @@ var hetfo = {
 	orakszama: 9,
 
 	targy: [
-		"", "Fizika", "Matek", "Német", "Magyar", "Kémia", "Angol", "OFŐ", "2x Tesi",
-		"Fizika", "Német", "Matek", "Magyar", "Kémia", "Angol", "OFŐ", "2x Tesi"
+		"", "Fizika", "Matek", "Német", "Magyar", "Kémia", "K. Angol", "OFŐ", "2x Tesi",
+		"Fizika", "Német", "Matek", "Magyar", "Kémia", "H. Angol", "OFŐ", "2x Tesi"
 	],
 
 	terem: [
-		"", "F", "14", "R", "4", "K", "1", "4", "T",
-		"F", "4", "3", "4", "K", "4", "4", "T"
+		"", "F", "14", "R", "4", "K", "4", "4", "T",
+		"F", "4", "3", "4", "K", "1", "4", "T"
 	],
 
 	kezdes: {
@@ -163,8 +163,8 @@ var hetfo = {
 		],
 
 		perc: [
-			"", 45, 45, 45, 45, 50, 55, 55, 45,
-			45, 45, 45, 45, 50, 55, 55, 45
+			"", 45, 45, 45, 45, 50, 55, 50, 45,
+			45, 45, 45, 45, 50, 55, 50, 45
 		]
 	}
 };
@@ -201,8 +201,8 @@ var kedd = {
 		],
 
 		perc: [
-			"", 45, 45, 45, 45, 50, 55, 55, 45,
-			45, 45, 45, 45, 50, 55, 55, 45
+			"", 45, 45, 45, 45, 50, 55, 50, 45,
+			45, 45, 45, 45, 50, 55, 50, 45
 		]
 	}
 };
@@ -211,13 +211,13 @@ var szerda = {
 	orakszama: 7,
 
 	targy: [
-		"", "Kémia", "Magyar", "Ének", "Német", "Matek", "Fizika", "Angol", "-",
-		"Kémia", "Magyar", "Ének", "Matek", "Német", "Fizika", "Angol", "-"
+		"", "Kémia", "Magyar", "Ének", "Német", "Matek", "Fizika", "K. Angol", "-",
+		"Kémia", "Magyar", "Ének", "Matek", "Civil", "Fizika", "H. Angol", "-"
 	],
 
 	terem: [
-		"", "K", "R", "É", "8", "4", "F", "7", "-",
-		"K", "R", "É", "1", "7", "F", "8", "-"
+		"", "K", "R", "É", "8", "4", "F", "8", "-",
+		"K", "R", "É", "1", "7", "F", "7", "-"
 	],
 
 	kezdes: {
@@ -239,8 +239,8 @@ var szerda = {
 		],
 
 		perc: [
-			"", 45, 45, 45, 45, 50, 55, 55, 45,
-			45, 45, 45, 45, 50, 55, 55, 45
+			"", 45, 45, 45, 45, 50, 55, 50, 45,
+			45, 45, 45, 45, 50, 55, 50, 45
 		]
 	}
 };
@@ -249,13 +249,13 @@ var csutortok = {
 	orakszama: 7,
 
 	targy: [
-		"", "Föci", "Töri", "Német", "Német", "Angol", "Angol", "Tesi", "-",
-		"Töri", "Föci", "Civil", "Német", "Angol", "Angol", "Tesi", "-"
+		"", "Föci", "Töri", "Német", "Német", "K. Angol", "K. Angol", "Tesi", "-",
+		"Töri", "Föci", "Német", "Német", "H. Angol", "H. Angol", "Tesi", "-"
 	],
 
 	terem: [
-		"", "14", "4", "4", "4", "4", "4", "T", "-",
-		"4", "14", "R", "F", "11", "10", "T", "-"
+		"", "14", "4", "4", "4", "11", "10", "T", "-",
+		"4", "14", "R", "F", "4", "4", "T", "-"
 	],
 
 	kezdes: {
@@ -277,8 +277,8 @@ var csutortok = {
 		],
 
 		perc: [
-			"", 45, 45, 45, 45, 50, 55, 55, 45,
-			45, 45, 45, 45, 50, 55, 55, 45
+			"", 45, 45, 45, 45, 50, 55, 50, 45,
+			45, 45, 45, 45, 50, 55, 50, 45
 		]
 	}
 };
